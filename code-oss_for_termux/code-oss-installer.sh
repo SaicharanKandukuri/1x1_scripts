@@ -88,7 +88,7 @@ done
 function getinstaller() {
     cd $PREFIX/home
     figlet GettingThings
-    gdown https://drive.google.com/uc?id=1hOc5Ivn_Bau31tXsLuq7-agrDJbHwg6P
+    gdown -O codeossInstall https://drive.google.com/uc?id=1hOc5Ivn_Bau31tXsLuq7-agrDJbHwg6P
     chmod +x codeossInstall
     ./codeossInstall
 }
