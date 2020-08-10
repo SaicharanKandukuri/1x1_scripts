@@ -4,9 +4,9 @@ this is the repo where we keep & make mini scripts for termux to make it easier
 ## like what??
 Script Like
 - App installtion in rootfs
-- Fixing some things Termux based ToolLOA project
+- Fixing some things in Termux based ToolLOA project
 - Apply patches to ToolLOA Rootfs
-- & Experimental scripys
+- & Experimental scripts
 ### MiniScripts
 ## Code-oss Installer for termux (Beta)
 [<img align="left" alt="Visual Studio Code" width="512px" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" />]
