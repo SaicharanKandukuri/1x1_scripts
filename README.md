@@ -7,7 +7,7 @@ Script Like
 - Fixing some things Termux based ToolLOA project
 - Apply patches to ToolLOA Rootfs
 - & Experimental scripys
-### Installtion
+### MiniScripts
 ## Code-oss Installer for termux (Beta)
 [<img align="left" alt="Visual Studio Code" width="512px" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" />]
 This code installs code-oss in Termux kali roots
