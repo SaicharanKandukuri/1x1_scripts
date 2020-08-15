@@ -55,7 +55,7 @@ function install {
    printf "\n\e[1;35m nix is already installed \e[0m\n"
     else
     cp $HOME/nix $TPREFIX/usr/bin/
-    chmod 777 $TPREFIX/bin/nix
+    chmod 777 $TPREFIX/usr/bin/nix
 printf "\ninstallationcomplete\n"
    fi
 
