@@ -1,4 +1,4 @@
-#/data/data/com.termux/files/usr/bin/bash -e
+#!/data/data/com.termux/files/usr/bin/bash -e
 TPREFIX=/data/data/com.termux/files
 ####################################################
 ## code made for andronix community by saicharankandukuri from 1x1 Tech
