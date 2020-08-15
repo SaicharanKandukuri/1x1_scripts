@@ -1,0 +1,92 @@
+#/data/data/com.termux/files/usr/bin/bash -e
+TPREFIX=/data/data/com.termux/files
+####################################################
+## code made for andronix community by saicharankandukuri from 1x1 Tech
+AndHome=$TPREFIX/home
+
+#########################################################################
+## Distro section
+## This is where script
+## variable AndronixRootfs sets strings to start scripts
+
+
+
+## For Ubuntu 20.04
+AndronixRootfs=start-ubuntu20.sh
+
+## for Ubuntu 18.04
+# AndronixRootfs=start-ubuntu.sh
+
+## for kali linux
+# AndronixRootfs=start-kali.sh
+
+## for debian
+# AndronixRootfs=start-denian.sh
+
+## for Andronix Ubuntu XFCE Modded os
+# AndronixRootfs=start-andronix.sh
+
+## -> if your installed andronix distro is not listed above please make your like in blow
+# Andronix-Rootfs=
+
+########################################################################
+## functions
+## This is where main logic starts
+function start() {
+    # lets kill the present vncserver & lift the locks
+    cd $AndHome
+    ./$AndronixRootfs vncserver -kill :1
+    # lets start vncserver again
+am start -n com.realvnc.viewer.android/.app.ConnectionChooserActivity
+    ./$AndronixRootfs vncserver -geometry 2340x1080 :1
+    ./$AndronixRootfs exit
+   #Now time to jump into app
+   # for real Vnc users
+#    am start -n com.realvnc.viewer.android/.app.ConnectionChooserActivity
+   # for nthunter kex users uncomemt below line & comment above line
+   # am start -n com.offsec.nethunter.kex/cpm.iiordanov.bVNC.bVNC
+}
+function stop() {
+    # this stops vncserver
+    ./$AndronixRootfs vncserver -kill :1
+}
+function install {
+    if [ -e $TPREFIX/usr/bin/nix ]; then
+   printf "\n\e[1;35m nix is already installed \e[0m\n"
+    else
+    cp $HOME/nix $TPREFIX/usr/bin/
+    chmod 777 $TPREFIX/bin/nix
+printf "\ninstallationcomplete\n"
+   fi
+
+}
+function removenix {
+rm -rf $TPREFIX/usr/bin/nix
+echo "done\n"
+}
+
+
+case $1 in
+      start)
+       start
+    ;;
+      stop)
+      stop
+    ;;
+       install)
+      install
+    ;;
+       edit)
+     nano /data/data/com.termux/files/usr/bin/nix
+    ;;
+
+      remove)
+    removenix
+    ;;
+          *)
+ printf "unknown usage $1 \n"
+    printf " avalable arguments\n     install\n     start    \n     stop\n    remove\n      edit\n"
+   exit 1
+    ;;
+esac
+##########
