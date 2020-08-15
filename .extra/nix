@@ -27,7 +27,7 @@ AndHome=$TPREFIX/home
 # AndronixRootfs=start-andronix.sh
 
 ## -> if your installed andronix distro is not listed above please make your like in blow
-# Andronix-Rootfs=
+# AndronixRootfs=
 
 ########################################################################
 ## functions
